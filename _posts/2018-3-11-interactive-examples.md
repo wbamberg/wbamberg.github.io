@@ -7,7 +7,7 @@ We've just finished adding interactive examples for the JavaScript and CSS refer
 
 ## First prototypes
 
-The project began as a suggestion by [Florian Scholz], at an MDN meetup in December 2016, that we should add simple examples to the tops of MDN reference pages. Initially we didn't plan to make them interactive: we thought that they would just be static code samples. It was I think [Julien Gattelier] and [Sebastian Zartner] who first suggested that they could be more interesting, with an editor that provided autocomplete suggestions. Grumbling slightly, I incorporated the wonderful [Code Mirror], and we built some prototypes to test.
+The project began as a suggestion by [Florian Scholz], at an MDN meetup in December 2016, that we should add simple examples to the tops of MDN reference pages. Initially we didn't plan to make them interactive: we thought that they would just be static code samples. It was I think [Julien Gattelier] and [Sebastian Zartner] who first suggested that they could be more interesting, with an editor that provided autocomplete suggestions. So I incorporated the wonderful [Code Mirror], and we built some prototypes to test.
 
 In the early prototypes the JS editor looked something like this:
 
