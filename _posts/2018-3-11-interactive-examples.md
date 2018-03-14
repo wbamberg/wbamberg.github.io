@@ -7,7 +7,8 @@ We've just finished adding interactive examples for the JavaScript and CSS refer
 
 ## First prototypes
 
-The project began as a suggestion by [Florian Scholz], at an MDN meetup in December 2016, that we should add simple examples to the tops of MDN reference pages. Initially we didn't plan to make them interactive: we thought that they would just be static code samples. It was I think [Julien Gattelier] and [Sebastian Zartner] who first suggested that they could be more interesting, with an editor that provided autocomplete suggestions. So I incorporated the wonderful [Code Mirror], and we built some prototypes to test.
+The project was first outlined in the [MDN product strategy](https://docs.google.com/presentation/d/1S5kyvJyt7OX5Xe41vdcQmG_iTrNtTR0paoRvrkKLH28/edit#slide=id.g13778398cd_2_0), published at the end of 2016.
+For the first iteration we didn't plan to make them interactive: we thought that they would just be static code samples. [Julien Gattelier] and [Sebastian Zartner] suggested that they could be more interesting.
 
 In the early prototypes the JS editor looked something like this:
 
@@ -17,11 +18,17 @@ The CSS editor looked something like this:
 
 ![](../images/interactive-examples/css-editor-first-user-test.png)
 
+We wanted the examples - especially the CSS examples - to show users the range of possible values that an item could accept. In the early prototypes, we did this using autocomplete: when the user deleted the value assigned to a CSS property, we showed an autocomplete popup listing different syntax variations:
+
+![](../images/interactive-examples/css-editor-autocomplete.gif)
+
 ## First round of user testing
 
-In March 2017 [Kadir Topal] and I attended the first round of user testing, which was run by [Mark Hurst]. We learned a great deal about user testing, about our prototypes, and about what users wanted to see. We learned that users usually wanted to see examples and appreciated them being quick to find. Users liked interactive examples, too. But *noone* understood how to work our autocomplete, so reluctantly we let it go.
+In March 2017 [Kadir Topal] and I attended the first round of user testing, which was run by [Mark Hurst]. We learned a great deal about user testing, about our prototypes, and about what users wanted to see. We learned that users usually wanted to see examples and appreciated them being quick to find. Users liked interactive examples, too.
 
-Especially for CSS, though, we still wanted a way to show users the different kinds of syntax that an item can accept. For the CSS pages, we already had a PRE block in the pages listing syntax options, like this:
+But autocomplete was not successful as a way to show different syntax forms. It just wasn't discoverable, and even people who did accidentally trigger it didn't seem to understand what it was for.
+
+Especially for CSS, though, we still wanted a way to show readers the different kinds of syntax that an item can accept. For the CSS pages, we already had a PRE block in the pages that lists syntax options, like this:
 
     transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
     transform: translate(12px, 50%);
@@ -33,17 +40,19 @@ Especially for CSS, though, we still wanted a way to show users the different ki
     transform: rotate(0.5turn);
     transform: skew(30deg, 20deg);
 
-One user interaction we saw, that we really liked, was when users would copy lines from this PRE block into the editor, to see the effect. So we thought of combining this PRE block and the editor:
+One user interaction we saw, that we really liked, was when readers would copy lines from this PRE block into the editor, to see the effect. So we thought of combining this PRE block and the editor.
 
-![](../images/interactive-examples/css-editor-first-of-final.png)
+In this version, you can select a line from the block underneath, and the style is applied to the element above:
 
-In this version, you can select a line from the block underneath, and the style is applied to the element above.
+![](../images/interactive-examples/css-editor-first-final.gif)
 
-It looks terrible now, but it's interesting that the basic interaction model that we would eventually use for both JavaScript and CSS editors was already in place.
+Looking back now, it's interesting that the basic interaction model that we would eventually use for both JavaScript and CSS editors was already in place. Although the changes we made after this point were essentially about styling, they had a dramatic effect on the editor's usability.
 
 ## Building a foundation
 
 After that not much happened for a while, because we didn't have any front-end resources. [Stephanie Hobson] helped improve the editor design, but she was also engaged in a full-scale redesign of MDN's article pages. In June [Schalk Neethling] joined the team, dedicated to this project. He built a solid foundation for the editors and a whole new contribution workflow. This would be the basis of the final implementation.
+
+In this implementation, interactive examples are maintained in the [interactive-examples](https://github.com/mdn/interactive-examples) GitHub repository. Once an interactive example is merged to the repo, it is built automatically as a standalone page served from a URL under https://interactive-examples.mdn.mozilla.net/. To include the example in an MDN page, we then embed the interactive example's document using an `iframe`.
 
 ## UX work and more user testing
 
