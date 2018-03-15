@@ -7,10 +7,7 @@ We've just finished adding interactive examples for the JavaScript and CSS refer
 
 ## First prototypes
 
-The project was first outlined in the [MDN product strategy](https://docs.google.com/presentation/d/1S5kyvJyt7OX5Xe41vdcQmG_iTrNtTR0paoRvrkKLH28/edit#slide=id.g13778398cd_2_0), published at the end of 2016.
-For the first iteration we didn't plan to make them interactive: we thought that they would just be static code samples. [Julien Gattelier] and [Sebastian Zartner] suggested that they could be more interesting.
-
-In the early prototypes the JS editor looked something like this:
+The project was first outlined in the [MDN product strategy](https://docs.google.com/presentation/d/1S5kyvJyt7OX5Xe41vdcQmG_iTrNtTR0paoRvrkKLH28/edit#slide=id.g13778398cd_2_0), published at the end of 2016. We discussed some ideas on the MDN mailing list, and the first prototypes looked something like this:
 
 ![](../images/interactive-examples/js-editor-first-user-test.png)
 
@@ -18,13 +15,13 @@ The CSS editor looked something like this:
 
 ![](../images/interactive-examples/css-editor-first-user-test.png)
 
-We wanted the examples - especially the CSS examples - to show users the range of possible values that an item could accept. In the early prototypes, we did this using autocomplete: when the user deleted the value assigned to a CSS property, we showed an autocomplete popup listing different syntax variations:
+We wanted the examples - especially the CSS examples - to show users the different kinds of syntax that an item could accept. In the early prototypes, we did this using autocomplete: when the user deleted the value assigned to a CSS property, we showed an autocomplete popup listing different syntax variations:
 
 ![](../images/interactive-examples/css-editor-autocomplete.gif)
 
 ## First round of user testing
 
-In March 2017 [Kadir Topal] and I attended the first round of user testing, which was run by [Mark Hurst]. We learned a great deal about user testing, about our prototypes, and about what users wanted to see. We learned that users usually wanted to see examples and appreciated them being quick to find. Users liked interactive examples, too.
+In March 2017 [Kadir Topal] and I attended the first round of user testing, which was run by [Mark Hurst]. We learned a great deal about user testing, about our prototypes, and about what users wanted to see. We learned that users  wanted examples and appreciated them being quick to find. Users liked interactive examples, too.
 
 But autocomplete was not successful as a way to show different syntax forms. It just wasn't discoverable, and even people who did accidentally trigger it didn't seem to understand what it was for.
 
@@ -46,7 +43,7 @@ In this version, you can select a line from the block underneath, and the style 
 
 ![](../images/interactive-examples/css-editor-first-final.gif)
 
-Looking back now, it's interesting that the basic interaction model that we would eventually use for both JavaScript and CSS editors was already in place. Although the changes we made after this point were essentially about styling, they had a dramatic effect on the editor's usability.
+Looking back at this prototype now, two things stand out: first, the basic interaction model that we would eventually ship was already in place. Second, although the changes we would make after this point were essentially about styling, they had a dramatic effect on the editor's usability.
 
 ## Building a foundation
 
@@ -102,8 +99,6 @@ After that [Rachel Andrew] and [Daniel Beck] started working with us, and they t
 
 ## What's next?
 
-Right now we're working on implementing interactive examples for the HTML reference. We just concluded a round of user testing, with [encouraging results], and hope to start writing examples soon.
+Right now we're working on implementing interactive examples for the [HTML reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference). We have just finished a round of user testing, with [encouraging results](This text uses the Verdana font (10px), and hope to start writing examples soon.
 
-After that we'll look at the Web APIs. This is a huge area, so we'll prioritise some sections of it to start with.
-
-It's striking to me how the project has been shaped by so many people contributing such a range of different skills. If you'd like to help out with the project, please check out the [interactive-examples repo] and the [MDN Discourse forum], where we regularly announce updates.
+To get this far, the project has been shaped by many people contributing a wide range of different skills. If you'd like to help out with the project, please check out the [interactive-examples repo] and the [MDN Discourse forum], where we regularly announce updates.
