@@ -47,7 +47,7 @@ Looking back at this prototype now, two things stand out: first, the basic inter
 
 ## Building a foundation
 
-After that not much happened for a while, because we didn't have any front-end resources. [Stephanie Hobson] helped improve the editor design, but she was also engaged in a full-scale redesign of MDN's article pages. In June [Schalk Neethling] joined the team, dedicated to this project. He built a solid foundation for the editors and a whole new contribution workflow. This would be the basis of the final implementation.
+After that not much happened for a while, because our front-end developers were busy on other projects. [Stephanie Hobson] helped improve the editor design, but she was also engaged in a full-scale redesign of MDN's article pages. In June [Schalk Neethling] joined the team, dedicated to this project. He built a solid foundation for the editors and a whole new contribution workflow. This would be the basis of the final implementation.
 
 In this implementation, interactive examples are maintained in the [interactive-examples](https://github.com/mdn/interactive-examples) GitHub repository. Once an interactive example is merged to the repo, it is built automatically as a standalone page served from a URL under https://interactive-examples.mdn.mozilla.net/. To include the example in an MDN page, we then embed the interactive example's document using an `iframe`.
 
@@ -65,7 +65,7 @@ Stephanie and Schalk did a full UX review of both editors. We also had an indepe
 
 ![](../images/interactive-examples/css-editor-final-user-test.png)
 
-Then we had another round of user testing. This time we ran remote user tests over video, with participants recruited through MDN itself. This enabled us to have a tight feedback loop for the editors: we could quickly make and test adjustments based on user feedback.
+Then we had another round of user testing. This time we ran remote user tests over video, with participants recruited through MDN itself. This gave us a tight feedback loop for the editors: we could quickly make and test adjustments based on user feedback.
 
 This time user testing was very positive, and we decided we were ready for beta testing.
 
@@ -83,7 +83,7 @@ Now we had an editor but very few actual examples. We asked [Mark Boas] to write
 
 We had another problem, though: it was clear that the editors regressed page load time too much. Schalk and Stephanie wrung every last millisecond of performance optimization out of the architecture, and finally, in December 2017, we decided to ship.
 
-In fact we're still not happy with the performance, but have some extra tricks planned for this year that we hope will make it back and more.
+We have some extra tricks we plan to implement this year to continue improving page load performance, the fact is we're still not happy with current performance on interactive pages.
 
 ## CSS examples
 
